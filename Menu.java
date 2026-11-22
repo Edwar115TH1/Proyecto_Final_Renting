@@ -3,7 +3,8 @@ public class Menu {
     
     public static void main(String[] args) { // Unica Clase Principal
         Scanner SC = new Scanner(System.in); // creamos el objeto de la clase Scaner que usaremos.
-        Utilidades u = new Utilidades();
+        AlmacenamientoDatos datos = new AlmacenamientoDatos();
+        Utilidades u = new Utilidades(datos);
         boolean seguir = true;
         while (seguir) {
             switch(u.menuPpal(SC)) {
@@ -28,7 +29,7 @@ public class Menu {
                     break;               
 
                 default:
-                    System.out.println("esta opcion no esta disponible por favor valide");
+                    System.out.println("\n Esta opcion no esta disponible por favor valide");
                     break;
             }
         }
